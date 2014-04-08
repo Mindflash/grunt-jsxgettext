@@ -14,7 +14,7 @@ grunt.initConfig({
 				}
 			],
 			options: {
-				keyword: 'getText'
+				keyword: 'gettext'
 			}
 		}
 	}

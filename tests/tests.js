@@ -10,7 +10,7 @@ test("N files work", function (t) {
 			path.join(__dirname, "fixtures/files/test.ejs"),
 			path.join(__dirname, "fixtures/files/test.js")
 		],
-		keyword: 'getText'
+		keyword: 'dgettext|dngettext'
 	};
 
 	task(grunt, options, function (err, res) {
@@ -26,7 +26,7 @@ test("Ignores non existent files", function (t) {
 			path.join(__dirname, "fixtures/files/doesNotExist.ejs"),
 			path.join(__dirname, "fixtures/files/doesNotExist.js")
 		],
-		keyword: 'getText'
+		keyword: 'dgettext|dngettext'
 	};
 
 	task(grunt, options, function (err, res) {
