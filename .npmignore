@@ -1,0 +1,7 @@
+.DS_Store
+dist/*
+*.iml
+*.log
+node_modules
+*.yml
+doc
