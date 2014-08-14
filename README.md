@@ -10,7 +10,8 @@ grunt.initConfig({
 			files: [
 				{
 					src: ['tests/fixtures/**/*.*js', '!ignored'],
-					dest: './test.pot'
+					output: 'test.po',
+					'output-dir': './translations/'
 				}
 			],
 			options: {

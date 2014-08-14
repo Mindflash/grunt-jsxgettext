@@ -13,7 +13,9 @@ module.exports = function (grunt) {
             var dest = path.join(fileSet['output-dir'] || '', fileSet.output);
 			var options = _.defaults(self.options(), {
 				files: fileSet.src,
-                dest: dest
+                dest: dest,
+                'output-dir': fileSet['output-dir'],
+                output: fileSet['output']
 			});
 			task(grunt, options, function (err, res) {
 				if(err) return eCb(err);
