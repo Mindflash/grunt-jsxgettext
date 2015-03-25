@@ -10,7 +10,13 @@ module.exports = function (grunt) {
 		var done = self.async();
 
 		async.each(self.files, function(fileSet, eCb) {
-            var dest = path.join(fileSet['output-dir'] || '', fileSet.output);
+			var dest;
+			if (typeof fileSet.dest !== 'undefined' && fileSet.dest) {
+				dest = fileSet.dest;
+			} else {
+				dest = path.join(fileSet['output-dir'] || '', fileSet.output);
+			}
+
 			var options = _.defaults(self.options(), {
 				files: fileSet.src,
                 dest: dest,
