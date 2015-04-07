@@ -22,6 +22,30 @@ grunt.initConfig({
 })
 ```
 
+### Options
+
+**** generators
+
+Type: 'String' or 'function'
+Default:
+```
+{
+    '.ejs': jsxgettext.generateFromEJS,
+    '.hbs': jsxgettext.generateFromHandlebars,
+    '.jade': jsxgettext.generateFromJade,
+    '.swig': jsxgettext.generateFromSwig
+}
+```
+Used to add/modify mapping between file extensions and generators (parsers) used by jsxgettext.
+
+This can be one of the following:
+
+- Specifying a pair of extensions. Used to add a extensions for existing generators. For example 
+if we wanted to tell jsxgettext that our handlebars templates have '.html' extensions: ```{'.html': '.hbs'}```
+- Specifying an extension along with the jsxgettext generator function name: ```{'.html': 'generateFromSwig'}```
+- Specifying an extension along with an generator function: ```{'.html': jsxgettext.generateFromSwig}```
+
+
 ### Getting Started
 This plugin requires Grunt `~0.4.2`
 ```shell
