@@ -4,3 +4,4 @@ dist/*
 *.iml
 *.log
 node_modules
+test.pot
