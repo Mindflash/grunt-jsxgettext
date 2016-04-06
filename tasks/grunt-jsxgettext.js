@@ -1,5 +1,6 @@
 'use strict';
 var _ = require('lodash');
+var path = require('path');
 var task = require('../lib');
 var async = require('async');
 
@@ -9,13 +10,23 @@ module.exports = function (grunt) {
 		var done = self.async();
 
 		async.each(self.files, function(fileSet, eCb) {
+			var dest;
+			if (typeof fileSet.dest !== 'undefined' && fileSet.dest) {
+				dest = fileSet.dest;
+			} else {
+				dest = path.join(fileSet['output-dir'] || '', fileSet.output);
+			}
+
 			var options = _.defaults(self.options(), {
-				files: fileSet.src
+				files: fileSet.src,
+                dest: dest,
+                'output-dir': fileSet['output-dir'],
+                output: fileSet['output']
 			});
 			task(grunt, options, function (err, res) {
 				if(err) return eCb(err);
 
-				grunt.file.write(fileSet.dest, res);
+				grunt.file.write(dest, res);
 				eCb();
 			});
 		}, function(err) {
