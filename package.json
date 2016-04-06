@@ -1,40 +1,40 @@
 {
-	"name": "grunt-jsxgettext",
-	"description": "A Grunt task to run jsxgettext against files to extract strings into a POT file.",
-	"version": "0.0.3",
-	"homepage": "https://github.com/Mindflash/grunt-jsxgettext",
-	"author": {
-		"name": "Mindflash",
-		"url": "https://github.com/Mindflash"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/Mindflash/grunt-jsxgettext.git"
-	},
-	"bugs": {
-		"url": "https://github.com/Mindflash/grunt-jsxgettext/issues"
-	},
-	"license": "ISC",
-	"main": "Gruntfile.js",
-	"engines": {
-		"node": ">= 0.1.0"
-	},
-	"scripts": {
-		"test": "grunt"
-	},
-	"dependencies": {
-		"lodash": "~2.2.1",
-		"jsxgettext": "~0.4.0",
-		"async": "^0.7.0"
-	},
-	"devDependencies": {
-		"grunt-contrib-jshint": "~0.7.2",
-		"grunt": "~0.4.2"
-	},
-	"peerDependencies": {
-		"grunt": ">=0.4.0"
-	},
-	"keywords": [
-		"gruntplugin"
-	]
+  "name": "grunt-jsxgettext",
+  "description": "A Grunt task to run jsxgettext against files to extract strings into a POT file.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Mindflash/grunt-jsxgettext",
+  "author": {
+    "name": "Mindflash",
+    "url": "https://github.com/Mindflash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mindflash/grunt-jsxgettext.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mindflash/grunt-jsxgettext/issues"
+  },
+  "license": "ISC",
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.1.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "dependencies": {
+    "async": "^0.7.0",
+    "jsxgettext": "^0.8.2",
+    "lodash": "~2.2.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt": "~0.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
 }

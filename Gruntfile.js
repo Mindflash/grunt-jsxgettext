@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 						}
 					],
 					options: {
-						keyword: 'dgettext|dngettext'
+						keyword: ['dgettext', 'dngettext']
 					}
 				}
 			}
