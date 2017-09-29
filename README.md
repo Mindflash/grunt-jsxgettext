@@ -5,20 +5,20 @@
 ### Example
 ```js
 grunt.initConfig({
-	jsxgettext: {
-		test: {
-			files: [
-				{
-					src: ['tests/fixtures/**/*.*js', '!ignored'],
-					output: 'test.po',
-					'output-dir': './translations/'
-				}
-			],
-			options: {
-				keyword: ['gettext']
-			}
-		}
-	}
+  jsxgettext: {
+    test: {
+      files: [
+        {
+          src: ['tests/fixtures/**/*.*js', '!ignored'],
+          output: 'test.po',
+          'output-dir': './translations/'
+        }
+      ],
+      options: {
+        keyword: ['gettext']
+      }
+    }
+  }
 })
 ```
 
